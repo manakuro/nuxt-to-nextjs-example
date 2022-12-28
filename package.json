@@ -1,0 +1,14 @@
+{
+  "private": "true",
+  "name": "nuxt_to_next",
+  "version": "1.0.0",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "dev:nuxt": "yarn workspace nuxt run dev",
+    "dev:next": "yarn workspace next run dev"
+  }
+}
