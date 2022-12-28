@@ -17,7 +17,7 @@
       </ul>
     </div>
     <div class="p-4">
-      <slot />  
+      <slot />
     </div>
   </div>
 
