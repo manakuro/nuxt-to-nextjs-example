@@ -16,6 +16,4 @@
 # Node.js dependencies:
 node_modules/
 
-pages
-styles
-src
+src/
