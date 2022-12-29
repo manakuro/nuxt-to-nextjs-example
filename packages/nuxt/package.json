@@ -3,12 +3,13 @@
   "name": "nuxt",
   "version": "1.0.0",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "PORT=3001 nuxt dev",
+    "build": "yarn nuxt:prepare && nuxt build",
+    "dev": "yarn nuxt:prepare && PORT=3001 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "start": "HOST=0.0.0.0 PORT=8080 node .output/server/index.mjs",
-    "postinstall": "node scripts/postintall.js"
+    "nuxt:prepare": "nuxi prepare",
+    "deploy": "cp ../../yarn.lock ./ && gcloud app deploy --quiet && rm -r yarn.lock"
   },
   "devDependencies": {
     "nuxt": "3.0.0",
