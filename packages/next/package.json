@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev -p 3002",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p 8080",
+    "lint": "next lint",
+    "deploy": "rm -rf .next && NODE_ENV=production yarn build && cp ../../yarn.lock ./ && gcloud app deploy --quiet && rm -r yarn.lock",
+    "deploy:local": "rm -rf .next && NODE_ENV=production yarn build && cp ../../yarn.lock ./ && rm -rf ./node_modules && rm -rf ../../node_modules && NODE_ENV=production yarn install && rm -r yarn.lock && yarn start"
   },
   "dependencies": {
     "@next/font": "13.1.1",
