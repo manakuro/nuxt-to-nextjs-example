@@ -1,0 +1,5 @@
+dispatch:
+  - url: "*/about"
+    service: next
+  - url: "*/_next/*"
+    service: next

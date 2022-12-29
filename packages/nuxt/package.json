@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "start": "HOST=0.0.0.0 PORT=8080 node .output/server/index.mjs",
     "nuxt:prepare": "nuxi prepare",
-    "deploy": "NODE_ENV=production APP_ENV=production yarn build && cp ../../yarn.lock ./ && gcloud app deploy --quiet && rm -r yarn.lock"
+    "deploy": "rm -rf .nuxt && NODE_ENV=production yarn build && cp ../../yarn.lock ./ && gcloud app deploy --quiet && rm -r yarn.lock",
+    "dispatch": "gcloud app deploy dispatch.yaml --quiet"
   },
   "devDependencies": {
     "nuxt": "3.0.0",
