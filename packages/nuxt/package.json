@@ -7,13 +7,11 @@
     "dev": "PORT=3001 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "start": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "nuxt": "3.0.0"
+    "start": "HOST=0.0.0.0 PORT=8080 node .output/server/index.mjs",
+    "postinstall": "node scripts/postintall.js"
   },
   "devDependencies": {
+    "nuxt": "3.0.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4"
