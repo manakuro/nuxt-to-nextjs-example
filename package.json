@@ -8,7 +8,11 @@
     ]
   },
   "scripts": {
-    "dev:nuxt": "yarn workspace nuxt run dev",
-    "dev:next": "yarn workspace next run dev"
+    "dev": "wsrun -a -p package-* -r dev",
+    "dev:nuxt": "yarn workspace @nuxt run dev",
+    "dev:next": "yarn workspace @next run dev"
+  },
+  "devDependencies": {
+    "wsrun": "^5.2.4"
   }
 }

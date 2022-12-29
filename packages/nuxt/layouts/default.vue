@@ -6,7 +6,7 @@
           <NuxtLink to="/" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">Home</NuxtLink>
         </li>
         <li class="mr-2">
-          <NuxtLink to="/about" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">About</NuxtLink>
+          <a :href="aboutURL" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">About</a>
         </li>
         <li class="mr-2">
           <NuxtLink to="/works" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">Works</NuxtLink>
@@ -22,3 +22,9 @@
   </div>
 
 </template>
+
+<script setup lang="ts">
+const config = useRuntimeConfig()
+
+const aboutURL = `${config.public.NEXT_URL}about`
+</script>
